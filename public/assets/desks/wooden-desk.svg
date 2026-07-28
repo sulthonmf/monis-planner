@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <!-- Shadow under desk legs -->
+  <ellipse cx="60" cy="325" rx="35" ry="8" fill="#000000" opacity="0.25"/>
+  <ellipse cx="540" cy="325" rx="35" ry="8" fill="#000000" opacity="0.25"/>
+
+  <!-- Left Solid Wood Leg Panel -->
+  <polygon points="40,120 70,120 70,325 40,325" fill="#422E21"/>
+  <polygon points="70,120 80,120 80,325 70,325" fill="#2E1E14"/>
+
+  <!-- Right Solid Wood Leg Panel -->
+  <polygon points="520,120 550,120 550,325 520,325" fill="#422E21"/>
+  <polygon points="520,120 530,120 530,325 520,325" fill="#583E2D"/>
+
+  <!-- Under Desk Back Privacy Panel -->
+  <rect x="75" y="140" width="445" height="110" fill="#2F2016"/>
+
+  <!-- Desktop Surface Front Bevel -->
+  <rect x="25" y="112" width="550" height="18" rx="3" fill="#5C4230"/>
+  <!-- Top Surface Surface -->
+  <path d="M 35 95 L 565 95 L 575 112 L 25 112 Z" fill="#70523C"/>
+
+  <!-- Wood Grain Details -->
+  <path d="M 50 102 L 540 102" stroke="#85634A" stroke-width="2" opacity="0.5"/>
+  <path d="M 90 107 L 500 107" stroke="#483324" stroke-width="1.5" opacity="0.6"/>
+</svg>

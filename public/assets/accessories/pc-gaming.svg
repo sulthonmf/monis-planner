@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" width="100%" height="100%">
+  <defs>
+    <!-- RGB Ambient Glass Glow -->
+    <radialGradient id="pcGlassGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#7928CA" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Fan RGB Gradients -->
+    <linearGradient id="fanGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#7928CA"/>
+    </linearGradient>
+
+    <linearGradient id="fanGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007F"/>
+      <stop offset="100%" stop-color="#7928CA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow under PC Case -->
+  <ellipse cx="120" cy="325" rx="75" ry="10" fill="#000000" opacity="0.4"/>
+
+  <!-- PC Case Anti-Vibration Feet -->
+  <rect x="50" y="315" width="20" height="10" rx="3" fill="#111827"/>
+  <rect x="170" y="315" width="20" height="10" rx="3" fill="#111827"/>
+
+  <!-- Main PC Tower Case Outer Frame -->
+  <rect x="35" y="25" width="170" height="295" rx="10" fill="#181A20" stroke="#2D303A" stroke-width="3"/>
+  <rect x="40" y="30" width="160" height="285" rx="8" fill="#0F1014"/>
+
+  <!-- Front Panel Mesh / Glass Strip (Right side of case) -->
+  <rect x="175" y="35" width="20" height="275" rx="3" fill="#181A20"/>
+
+  <!-- Front I/O Ports Top Right -->
+  <circle cx="185" cy="45" r="4" fill="#00F2FE"/> <!-- Power LED -->
+  <rect x="183" y="55" width="4" height="8" rx="1" fill="#4B5563"/> <!-- USB 3.0 -->
+  <rect x="183" y="68" width="4" height="8" rx="1" fill="#4B5563"/> <!-- USB C -->
+  <circle cx="185" cy="83" r="2.5" fill="#374151"/> <!-- Audio Jack -->
+
+  <!-- Inner Motherboard & Component Chamber (Behind Tempered Glass) -->
+  <rect x="45" y="35" width="125" height="275" rx="4" fill="#0B0C0F"/>
+
+  <!-- Motherboard PCB Base -->
+  <rect x="50" y="40" width="115" height="265" rx="2" fill="#14161C"/>
+
+  <!-- CPU Liquid Cooler Block with RGB Ring -->
+  <circle cx="105" cy="95" r="22" fill="#1E2028" stroke="url(#fanGrad1)" stroke-width="3"/>
+  <circle cx="105" cy="95" r="14" fill="#00F2FE" opacity="0.6"/>
+  <text x="105" y="98" font-family="sans-serif" font-size="7" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AIO</text>
+
+  <!-- Sleeved Liquid Cooler Tubing -->
+  <path d="M 120 85 Q 150 70 150 120" stroke="#374151" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 115 78 Q 155 60 155 125" stroke="#1F2937" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- RAM Sticks with RGB Top Bar -->
+  <rect x="135" y="80" width="5" height="35" rx="1" fill="#374151"/>
+  <rect x="135" y="80" width="5" height="8" rx="1" fill="#00F2FE"/>
+  <rect x="143" y="80" width="5" height="35" rx="1" fill="#374151"/>
+  <rect x="143" y="80" width="5" height="8" rx="1" fill="#FF007F"/>
+
+  <!-- Dedicated GPU Graphics Card (RTX Style) -->
+  <rect x="55" y="150" width="105" height="40" rx="4" fill="#1E2028" stroke="#374151" stroke-width="2"/>
+  <!-- GPU RGB Logo Strip -->
+  <rect x="65" y="156" width="45" height="6" rx="2" fill="#00F2FE"/>
+  <text x="87" y="161" font-family="sans-serif" font-size="5" font-weight="bold" fill="#000000" text-anchor="middle">GEFORCE RTX</text>
+  <!-- GPU Dual Fans -->
+  <circle cx="80" cy="175" r="10" fill="#111216" stroke="#374151" stroke-width="1.5"/>
+  <circle cx="125" cy="175" r="10" fill="#111216" stroke="#374151" stroke-width="1.5"/>
+
+  <!-- Power Supply Shroud at Bottom -->
+  <rect x="45" y="240" width="125" height="70" fill="#14161C"/>
+  <line x1="45" y1="240" x2="170" y2="240" stroke="#2D303A" stroke-width="2"/>
+  <rect x="55" y="255" width="60" height="20" rx="3" fill="#1E2028"/>
+  <text x="85" y="268" font-family="sans-serif" font-size="7" font-weight="bold" fill="#6B7280" text-anchor="middle">850W GOLD</text>
+
+  <!-- Front Intake 3x RGB Fans (Visible on mesh/glass edge) -->
+  <circle cx="185" cy="110" r="12" fill="none" stroke="url(#fanGrad1)" stroke-width="3"/>
+  <circle cx="185" cy="170" r="12" fill="none" stroke="url(#fanGrad2)" stroke-width="3"/>
+  <circle cx="185" cy="230" r="12" fill="none" stroke="url(#fanGrad1)" stroke-width="3"/>
+
+  <!-- Rear Exhaust RGB Fan -->
+  <circle cx="65" cy="95" r="10" fill="none" stroke="url(#fanGrad2)" stroke-width="2.5"/>
+
+  <!-- Tempered Glass Side Panel Tint Reflection -->
+  <rect x="45" y="35" width="125" height="275" rx="4" fill="url(#pcGlassGlow)"/>
+  <polygon points="45,35 150,35 70,310 45,310" fill="#FFFFFF" opacity="0.06"/>
+</svg>

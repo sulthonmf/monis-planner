@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 480" width="100%" height="100%">
+  <!-- Floor Shadow -->
+  <ellipse cx="175" cy="455" rx="115" ry="18" fill="#000000" opacity="0.3"/>
+
+  <!-- Chrome 5-Star Base -->
+  <circle cx="175" cy="420" r="18" fill="#9CA3AF"/>
+  <path d="M 175 420 L 65 440" stroke="#D1D5DB" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 175 420 L 285 440" stroke="#D1D5DB" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 175 420 L 110 450" stroke="#9CA3AF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 175 420 L 240 450" stroke="#9CA3AF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 175 420 L 175 460" stroke="#E5E7EB" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Wheels -->
+  <circle cx="60" cy="442" r="9" fill="#111827"/>
+  <circle cx="290" cy="442" r="9" fill="#111827"/>
+  <circle cx="105" cy="452" r="9" fill="#111827"/>
+  <circle cx="245" cy="452" r="9" fill="#111827"/>
+  <circle cx="175" cy="462" r="9" fill="#111827"/>
+
+  <!-- Lift Cylinder -->
+  <rect x="167" y="340" width="16" height="80" fill="#9CA3AF"/>
+
+  <!-- Padded Armrests -->
+  <path d="M 95 230 C 95 290 120 305 125 310" stroke="#9CA3AF" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <rect x="75" y="220" width="45" height="18" rx="8" fill="#1F2937"/>
+
+  <path d="M 255 230 C 255 290 230 305 225 310" stroke="#9CA3AF" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <rect x="230" y="220" width="45" height="18" rx="8" fill="#1F2937"/>
+
+  <!-- Plush Leather Seat Cushion -->
+  <rect x="100" y="280" width="150" height="35" rx="12" fill="#1F2937"/>
+  <rect x="110" y="285" width="130" height="20" rx="8" fill="#374151"/>
+
+  <!-- Plush High Backrest with Leather Tufting & Head Cushion -->
+  <path d="M 110 50 Q 175 40 240 50 L 245 280 Q 175 290 105 280 Z" fill="#111827"/>
+  <path d="M 118 60 Q 175 52 232 60 L 236 270 Q 175 278 114 270 Z" fill="#1F2937"/>
+
+  <!-- Leather Tufting Seam Lines -->
+  <line x1="125" y1="120" x2="225" y2="120" stroke="#374151" stroke-width="3"/>
+  <line x1="125" y1="180" x2="225" y2="180" stroke="#374151" stroke-width="3"/>
+  <line x1="175" y1="60" x2="175" y2="260" stroke="#374151" stroke-width="2"/>
+
+  <!-- Plush Headrest Cushion Top -->
+  <rect x="130" y="45" width="90" height="40" rx="10" fill="#374151"/>
+</svg>

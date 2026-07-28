@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%">
+  <!-- Shadow under desk feet -->
+  <ellipse cx="120" cy="325" rx="70" ry="10" fill="#000000" opacity="0.25"/>
+  <ellipse cx="480" cy="325" rx="70" ry="10" fill="#000000" opacity="0.25"/>
+
+  <!-- Left Standing Leg Base Feet -->
+  <rect x="60" y="315" width="120" height="14" rx="4" fill="#1C1D21"/>
+  <!-- Right Standing Leg Base Feet -->
+  <rect x="420" y="315" width="120" height="14" rx="4" fill="#1C1D21"/>
+
+  <!-- Telescopic Lift Columns (Left Leg) -->
+  <rect x="110" y="140" width="20" height="180" rx="2" fill="#282A30"/>
+  <rect x="107" y="210" width="26" height="110" rx="2" fill="#1E2025"/>
+
+  <!-- Telescopic Lift Columns (Right Leg) -->
+  <rect x="470" y="140" width="20" height="180" rx="2" fill="#282A30"/>
+  <rect x="467" y="210" width="26" height="110" rx="2" fill="#1E2025"/>
+
+  <!-- Under-desk Support Crossbar & Frame -->
+  <rect x="90" y="130" width="420" height="18" fill="#181A1F"/>
+
+  <!-- Standing Desk Wooden Surface (3D Bevel Edge) -->
+  <!-- Under lip shadow -->
+  <rect x="25" y="130" width="550" height="12" rx="4" fill="#1A110B" opacity="0.6"/>
+  <!-- Front Edge Bevel -->
+  <rect x="20" y="112" width="560" height="20" rx="4" fill="#3D291D"/>
+  <!-- Main Desktop Surface -->
+  <path d="M 30 95 L 570 95 L 580 114 L 20 114 Z" fill="#52392A"/>
+  <!-- Wood Texture Highlights -->
+  <path d="M 50 102 L 550 102" stroke="#664936" stroke-width="2" opacity="0.5"/>
+  <path d="M 80 108 L 520 108" stroke="#422C1F" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Electric Height Control Switch Panel on Right Front -->
+  <rect x="440" y="122" width="50" height="12" rx="3" fill="#0F1014"/>
+  <circle cx="452" cy="128" r="2.5" fill="#10B981"/>
+  <rect x="462" y="126" width="6" height="4" rx="1" fill="#4B5563"/>
+  <rect x="472" y="126" width="6" height="4" rx="1" fill="#4B5563"/>
+
+  <!-- Headset Hook on Left Under-desk -->
+  <path d="M 75 130 L 75 155 Q 75 165 85 165" stroke="#282A30" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

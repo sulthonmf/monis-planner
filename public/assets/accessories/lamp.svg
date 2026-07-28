@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 350" width="100%" height="100%">
+  <defs>
+    <!-- Warm Light Cone Beam -->
+    <linearGradient id="lampBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#FCD34D" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lamp Base Shadow -->
+  <ellipse cx="180" cy="330" rx="40" ry="8" fill="#000000" opacity="0.3"/>
+
+  <!-- Warm LED Light Cone Beam Effect -->
+  <polygon points="90,135 15,340 180,340" fill="url(#lampBeam)"/>
+
+  <!-- Lamp Base -->
+  <ellipse cx="180" cy="325" rx="35" ry="10" fill="#1C1D21"/>
+  <ellipse cx="180" cy="323" rx="32" ry="7" fill="#2A2D37"/>
+
+  <!-- Lower Arm Column -->
+  <path d="M 180 323 L 130 200" stroke="#1C1D21" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="180" cy="323" r="7" fill="#4B5563"/>
+  <circle cx="130" cy="200" r="7" fill="#4B5563"/>
+
+  <!-- Upper Articulating Arm -->
+  <path d="M 130 200 L 90 120" stroke="#1C1D21" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="90" cy="120" r="6" fill="#4B5563"/>
+
+  <!-- Lamp Shade Head Cone -->
+  <g transform="rotate(35 90 120)">
+    <path d="M 75 100 L 115 100 L 125 135 L 65 135 Z" fill="#1C1D21"/>
+    <!-- Inner Bulb Glow -->
+    <ellipse cx="95" cy="135" rx="30" ry="6" fill="#FBBF24"/>
+    <ellipse cx="95" cy="135" rx="15" ry="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Cord Cable Wrap -->
+  <path d="M 85 125 Q 120 180 175 320" stroke="#111827" stroke-width="3" fill="none" opacity="0.7"/>
+</svg>

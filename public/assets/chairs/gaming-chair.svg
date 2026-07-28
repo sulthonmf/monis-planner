@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 480" width="100%" height="100%">
+  <!-- Base Shadow -->
+  <ellipse cx="175" cy="455" rx="110" ry="16" fill="#000000" opacity="0.3"/>
+
+  <!-- 5-Star Wheels Base -->
+  <circle cx="175" cy="420" r="16" fill="#0F172A"/>
+  <path d="M 175 420 L 70 440" stroke="#00F2FE" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 175 420 L 280 440" stroke="#00F2FE" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 175 420 L 115 450" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 175 420 L 235 450" stroke="#1E293B" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 175 420 L 175 460" stroke="#00F2FE" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Wheels -->
+  <circle cx="65" cy="442" r="9" fill="#020617"/>
+  <circle cx="285" cy="442" r="9" fill="#020617"/>
+  <circle cx="110" cy="452" r="9" fill="#020617"/>
+  <circle cx="240" cy="452" r="9" fill="#020617"/>
+  <circle cx="175" cy="462" r="9" fill="#020617"/>
+
+  <!-- Lift Column -->
+  <rect x="168" y="330" width="14" height="90" fill="#1E293B"/>
+
+  <!-- 4D Armrests -->
+  <path d="M 90 230 L 90 290 L 125 310" fill="none" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+  <rect x="70" y="220" width="45" height="15" rx="6" fill="#00F2FE"/>
+
+  <path d="M 260 230 L 260 290 L 225 310" fill="none" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+  <rect x="235" y="220" width="45" height="15" rx="6" fill="#00F2FE"/>
+
+  <!-- Racing Bucket Seat Cushion -->
+  <path d="M 100 275 Q 175 260 250 275 L 255 310 Q 175 320 95 310 Z" fill="#0F172A"/>
+  <path d="M 110 280 Q 175 270 240 280 L 244 305 Q 175 312 106 305 Z" fill="#1E293B"/>
+  <!-- Side Bolster Cyan Accents -->
+  <path d="M 100 275 L 115 310" stroke="#00F2FE" stroke-width="6"/>
+  <path d="M 250 275 L 235 310" stroke="#00F2FE" stroke-width="6"/>
+
+  <!-- Racing Bucket Backrest -->
+  <path d="M 115 50 Q 175 40 235 50 L 245 275 Q 175 285 105 275 Z" fill="#0F172A"/>
+  <path d="M 125 60 Q 175 52 225 60 L 232 265 Q 175 273 118 265 Z" fill="#1E293B"/>
+
+  <!-- Cyan Racing Stripes & Harness Holes -->
+  <path d="M 135 70 C 135 180 145 250 145 250" stroke="#00F2FE" stroke-width="6" fill="none"/>
+  <path d="M 215 70 C 215 180 205 250 205 250" stroke="#00F2FE" stroke-width="6" fill="none"/>
+
+  <!-- Harness Slots -->
+  <rect x="140" y="85" width="22" height="12" rx="4" fill="#0F172A"/>
+  <rect x="188" y="85" width="22" height="12" rx="4" fill="#0F172A"/>
+
+  <!-- Headrest Pillow -->
+  <rect x="135" y="45" width="80" height="30" rx="10" fill="#00F2FE"/>
+  <text x="175" y="64" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0F172A" text-anchor="middle">MONIS</text>
+
+  <!-- Lumbar Cushion -->
+  <rect x="130" y="200" width="90" height="35" rx="8" fill="#00F2FE"/>
+</svg>

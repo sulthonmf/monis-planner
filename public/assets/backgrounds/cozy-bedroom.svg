@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <!-- Wall Plaster Gradient -->
+    <linearGradient id="cozyWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282420"/>
+      <stop offset="60%" stop-color="#342F2A"/>
+      <stop offset="100%" stop-color="#3F3A34"/>
+    </linearGradient>
+
+    <!-- Warm Daylight/Ambient Light -->
+    <radialGradient id="cozyLight" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFE8C5" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Floor Gradient -->
+    <linearGradient id="cozyFloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A3425"/>
+      <stop offset="50%" stop-color="#3A271A"/>
+      <stop offset="100%" stop-color="#281A10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cozy Bedroom Wall -->
+  <rect width="1200" height="580" fill="url(#cozyWall)"/>
+  <rect width="1200" height="580" fill="url(#cozyLight)"/>
+
+  <!-- Vertical Wood Slat Accent Wall on Left Portion of Bedroom Wall -->
+  <g opacity="0.3">
+    <rect x="0" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="25" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="50" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="75" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="100" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="125" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="150" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="175" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="200" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="225" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="250" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="275" y="0" width="15" height="565" fill="#181410"/>
+    <rect x="300" y="0" width="15" height="565" fill="#181410"/>
+  </g>
+
+  <!-- Minimalist Bedroom Wall Clock -->
+  <circle cx="950" cy="150" r="45" fill="none" stroke="#6B5E52" stroke-width="4"/>
+  <line x1="950" y1="150" x2="950" y2="120" stroke="#8C7A6B" stroke-width="3" stroke-linecap="round"/>
+  <line x1="950" y1="150" x2="970" y2="150" stroke="#8C7A6B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Baseboard -->
+  <rect x="0" y="565" width="1200" height="15" fill="#1C1814"/>
+
+  <!-- Warm Oak Wood Floor -->
+  <rect x="0" y="580" width="1200" height="220" fill="url(#cozyFloor)"/>
+  <line x1="0" y1="650" x2="1200" y2="650" stroke="#281A10" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="720" x2="1200" y2="720" stroke="#281A10" stroke-width="2" opacity="0.6"/>
+
+  <!-- Woven Jute Bedroom Area Rug -->
+  <ellipse cx="600" cy="690" rx="460" ry="85" fill="#524336" opacity="0.85" stroke="#786352" stroke-width="3" stroke-dasharray="8,6"/>
+</svg>

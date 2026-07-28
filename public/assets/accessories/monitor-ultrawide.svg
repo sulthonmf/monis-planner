@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="100%" height="100%">
+  <defs>
+    <!-- Ultrawide Screen Wallpaper -->
+    <linearGradient id="ultrawideGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+
+    <radialGradient id="ultrawideGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow on Desk -->
+  <ellipse cx="300" cy="270" rx="130" ry="8" fill="#000000" opacity="0.35"/>
+
+  <!-- V-Shaped Metal Base Feet -->
+  <path d="M 220 270 L 300 240 L 380 270" stroke="#374151" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 220 270 L 300 240 L 380 270" stroke="#4B5563" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Stand Stem -->
+  <rect x="290" y="170" width="20" height="80" rx="3" fill="#1F2937"/>
+
+  <!-- Curved Screen Frame -->
+  <path d="M 20 20 Q 300 40 580 20 L 570 210 Q 300 225 30 210 Z" fill="#090A0F"/>
+  <path d="M 24 24 Q 300 43 576 24 L 566 206 Q 300 221 34 206 Z" fill="url(#ultrawideGrad)"/>
+
+  <!-- Curved Screen Graphic Lines (Trading / Code / Wave) -->
+  <path d="M 50 150 Q 180 60 300 130 T 550 80" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  <path d="M 50 160 Q 180 80 300 150 T 550 100" fill="none" stroke="#818CF8" stroke-width="2" opacity="0.7"/>
+
+  <!-- Screen Gloss Effect -->
+  <path d="M 24 24 Q 300 43 576 24 L 566 206 Q 300 221 34 206 Z" fill="url(#ultrawideGlow)"/>
+
+  <!-- Bottom Brand Dot -->
+  <circle cx="300" cy="216" r="2.5" fill="#38BDF8"/>
+</svg>

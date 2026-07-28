@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 300" width="100%" height="100%">
+  <!-- Stand Base Shadow -->
+  <ellipse cx="175" cy="280" rx="110" ry="12" fill="#000000" opacity="0.25"/>
+
+  <!-- Aluminum Base Plate -->
+  <polygon points="80,270 270,270 285,250 65,250" fill="#9CA3AF"/>
+  <polygon points="80,270 270,270 270,274 80,274" fill="#6B7280"/>
+
+  <!-- Dual Riser Arms -->
+  <!-- Left Arm -->
+  <polygon points="100,250 115,250 145,130 130,130" fill="#D1D5DB"/>
+  <polygon points="115,250 120,250 150,130 145,130" fill="#9CA3AF"/>
+
+  <!-- Right Arm -->
+  <polygon points="235,250 250,250 220,130 205,130" fill="#D1D5DB"/>
+  <polygon points="245,250 250,250 220,130 215,130" fill="#9CA3AF"/>
+
+  <!-- Top Riser Support Shelf -->
+  <polygon points="60,130 290,130 305,115 45,115" fill="#E5E7EB"/>
+  <polygon points="60,130 290,130 290,134 60,134" fill="#9CA3AF"/>
+
+  <!-- Rubber Anti-slip Pads -->
+  <rect x="70" y="117" width="30" height="8" rx="2" fill="#374151"/>
+  <rect x="250" y="117" width="30" height="8" rx="2" fill="#374151"/>
+  <!-- Front Hooks -->
+  <rect x="55" y="125" width="12" height="15" rx="3" fill="#6B7280"/>
+  <rect x="283" y="125" width="12" height="15" rx="3" fill="#6B7280"/>
+
+  <!-- Laptop (MacBook Pro Space Grey resting on stand) -->
+  <!-- Open Display Screen Base -->
+  <polygon points="40,115 310,115 320,10 30,10" fill="#1F2937"/>
+  <polygon points="48,110 302,110 312,18 38,18" fill="#111827"/>
+  <!-- Active Screen Display (IDE / Code wallpaper) -->
+  <polygon points="52,106 298,106 308,22 42,22" fill="#0F172A"/>
+
+  <!-- Code lines on laptop screen -->
+  <rect x="60" y="32" width="70" height="5" rx="2" fill="#38BDF8"/>
+  <rect x="60" y="42" width="120" height="4" rx="2" fill="#A855F7"/>
+  <rect x="75" y="50" width="90" height="4" rx="2" fill="#34D399"/>
+  <rect x="75" y="58" width="140" height="4" rx="2" fill="#F59E0B"/>
+  <rect x="60" y="66" width="50" height="4" rx="2" fill="#38BDF8"/>
+  <rect x="75" y="74" width="100" height="4" rx="2" fill="#EC4899"/>
+
+  <!-- Screen Gloss Line -->
+  <polygon points="52,106 180,22 205,22 52,106" fill="#FFFFFF" opacity="0.08"/>
+
+  <!-- Lower Laptop Body Base (Keyboard deck) -->
+  <polygon points="35,115 315,115 330,135 20,135" fill="#4B5563"/>
+  <polygon points="35,115 315,115 315,119 35,119" fill="#9CA3AF"/>
+</svg>
