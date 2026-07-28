@@ -109,7 +109,7 @@ export default function SidebarCatalog() {
                 onClick={() => setActiveTab(cat.key)}
                 className={`flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg transition-all whitespace-nowrap flex-shrink-0 ${
                   isActive
-                    ? 'bg-gray-900 text-white shadow-sm'
+                    ? 'bg-white border border-emerald-500 text-gray-900 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 border border-transparent'
                 }`}
               >
