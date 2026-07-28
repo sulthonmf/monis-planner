@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Share2, Camera, Plus, Minus, RotateCcw, Users, Move, GripHorizontal } from 'lucide-react';
+import { Share2, Camera, Plus, Minus, RotateCcw, Users, Move, GripHorizontal, PanelLeftOpen, PanelRightOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useWorkspaceStore } from '@/store/useWorkspaceStore';
 import { backgrounds, getProductById } from '@/data/products';
@@ -13,8 +13,13 @@ export default function WorkspaceCanvas() {
     selectedChairId,
     selectedAccessories,
     selectedBackgroundId,
+    isLeftPanelOpen,
+    isRightPanelOpen,
+    toggleLeftPanel,
+    toggleRightPanel,
     setBackground,
   } = useWorkspaceStore();
+
 
   const [zoom, setZoom] = useState(1);
 
@@ -111,6 +116,40 @@ export default function WorkspaceCanvas() {
           <RotateCcw size={14} className="text-gray-700" />
         </button>
       </div>
+
+      {/* Floating Unhide Buttons for Left & Right Panels */}
+      <AnimatePresence>
+        {!isLeftPanelOpen && (
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            onClick={toggleLeftPanel}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-3.5 py-2.5 flex items-center gap-2 transition-transform hover:scale-105 group"
+            title="Open Catalog Panel"
+          >
+            <PanelLeftOpen size={18} className="text-emerald-600 group-hover:scale-110 transition-transform" />
+            <span className="text-xs font-bold">Catalog</span>
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {!isRightPanelOpen && (
+          <motion.button
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            onClick={toggleRightPanel}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-3.5 py-2.5 flex items-center gap-2 transition-transform hover:scale-105 group"
+            title="Open Summary Panel"
+          >
+            <span className="text-xs font-bold">Summary</span>
+            <PanelRightOpen size={18} className="text-emerald-600 group-hover:scale-110 transition-transform" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
 
       {/* === CANVAS SCENE === */}
       <div

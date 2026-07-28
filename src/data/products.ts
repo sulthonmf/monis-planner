@@ -1,4 +1,23 @@
-import { Product, BackgroundOption } from '@/types/workspace';
+import { Product, BackgroundOption, CategoryTab, Currency } from '@/types/workspace';
+
+
+export interface CategoryTabMeta {
+  key: CategoryTab;
+  label: string;
+  iconName: string;
+}
+
+export const categoryTabs: CategoryTabMeta[] = [
+  { key: 'all', label: 'All Categories', iconName: 'LayoutGrid' },
+  { key: 'computer', label: 'Computer', iconName: 'Laptop' },
+  { key: 'monitors', label: 'Monitors', iconName: 'Monitor' },
+  { key: 'audio-video', label: 'Audio & Video', iconName: 'Headphones' },
+  { key: 'office-accessories', label: 'Office Accessories', iconName: 'Keyboard' },
+  { key: 'health-fitness', label: 'Health & Fitness', iconName: 'Activity' },
+  { key: 'furniture', label: 'Furniture', iconName: 'Armchair' },
+  { key: 'smart-home', label: 'Smart Home', iconName: 'Home' },
+  { key: 'gaming', label: 'Gaming', iconName: 'Gamepad2' },
+];
 
 export const products: Product[] = [
   // === DESKS ===
@@ -6,6 +25,7 @@ export const products: Product[] = [
     id: 'standing-desk-pro',
     name: 'Standing Desk Pro',
     category: 'desk',
+    subCategories: ['furniture', 'health-fitness', 'computer'],
     price: 62500,
     image: '/assets/desks/standing-desk-pro.svg',
     description: 'Electric height-adjustable standing desk with premium dark wood top.',
@@ -15,6 +35,7 @@ export const products: Product[] = [
     id: 'wooden-desk',
     name: 'Wooden Desk',
     category: 'desk',
+    subCategories: ['furniture', 'office-accessories'],
     price: 50000,
     image: '/assets/desks/wooden-desk.svg',
     description: 'Classic solid oak wood desk with elegant natural finish.',
@@ -23,6 +44,7 @@ export const products: Product[] = [
     id: 'bamboo-desk',
     name: 'Bamboo Eco Desk',
     category: 'desk',
+    subCategories: ['furniture', 'office-accessories'],
     price: 55000,
     image: '/assets/desks/bamboo-desk.svg',
     description: 'Sustainable bamboo top desk with minimalist clean design.',
@@ -31,6 +53,7 @@ export const products: Product[] = [
     id: 'white-desk',
     name: 'Minimalist White Desk',
     category: 'desk',
+    subCategories: ['furniture', 'office-accessories'],
     price: 48000,
     image: '/assets/desks/white-desk.svg',
     description: 'Clean Nordic minimalist white top desk with natural birch wood legs.',
@@ -41,6 +64,7 @@ export const products: Product[] = [
     id: 'ergonomic-chair',
     name: 'Ergonomic Pro Chair',
     category: 'chair',
+    subCategories: ['furniture', 'health-fitness', 'office-accessories'],
     price: 45000,
     image: '/assets/chairs/ergonomic-chair.svg',
     description: 'Full-support mesh chair with adjustable headrest and lumbar support.',
@@ -50,6 +74,7 @@ export const products: Product[] = [
     id: 'executive-chair',
     name: 'Executive Leather Chair',
     category: 'chair',
+    subCategories: ['furniture', 'office-accessories'],
     price: 55000,
     image: '/assets/chairs/executive-chair.svg',
     description: 'Premium faux-leather high-back executive chair.',
@@ -58,6 +83,7 @@ export const products: Product[] = [
     id: 'gaming-chair',
     name: 'Gaming Racing Chair',
     category: 'chair',
+    subCategories: ['furniture', 'gaming'],
     price: 50000,
     image: '/assets/chairs/gaming-chair.svg',
     description: 'Ergonomic racing bucket seat with head pillow and lumbar cushion.',
@@ -67,6 +93,7 @@ export const products: Product[] = [
     id: 'task-chair',
     name: 'Minimalist Task Chair',
     category: 'chair',
+    subCategories: ['furniture', 'office-accessories'],
     price: 35000,
     image: '/assets/chairs/task-chair.svg',
     description: 'Compact mid-back task chair ideal for clean setups.',
@@ -77,6 +104,7 @@ export const products: Product[] = [
     id: 'monitor-single',
     name: 'Single 24" Monitor',
     category: 'accessory',
+    subCategories: ['monitors', 'computer', 'office-accessories'],
     price: 40000,
     image: '/assets/accessories/monitor-24.svg',
     description: 'Full HD IPS 24" display with slim bezel.',
@@ -85,6 +113,7 @@ export const products: Product[] = [
     id: 'monitor-dual',
     name: 'Dual 24" Monitors',
     category: 'accessory',
+    subCategories: ['monitors', 'computer', 'office-accessories'],
     price: 80000,
     image: '/assets/accessories/monitor-dual.svg',
     description: 'Dual side-by-side 24" IPS displays mounted on heavy-duty desk arm.',
@@ -94,6 +123,7 @@ export const products: Product[] = [
     id: 'monitor-ultrawide',
     name: '34" Ultrawide Curved',
     category: 'accessory',
+    subCategories: ['monitors', 'computer', 'gaming'],
     price: 70000,
     image: '/assets/accessories/monitor-ultrawide.svg',
     description: '34" WQHD Ultrawide curved display for immersive gaming and productivity.',
@@ -102,6 +132,7 @@ export const products: Product[] = [
     id: 'pc-gaming',
     name: 'Gaming PC Tower',
     category: 'accessory',
+    subCategories: ['computer', 'gaming'],
     price: 75000,
     image: '/assets/accessories/pc-gaming.svg',
     description: 'High-performance RGB Gaming Rig with AIO liquid cooling and RTX graphics card.',
@@ -111,6 +142,7 @@ export const products: Product[] = [
     id: 'lightbar',
     name: 'Cyber RGB Lightbar',
     category: 'accessory',
+    subCategories: ['audio-video', 'smart-home', 'office-accessories', 'gaming'],
     price: 15000,
     image: '/assets/accessories/lightbar.svg',
     description: 'Monitor top lightbar with warm eye-care downlight and RGB ambient backglow.',
@@ -119,6 +151,7 @@ export const products: Product[] = [
     id: 'lamp',
     name: 'Adjustable Lamp',
     category: 'accessory',
+    subCategories: ['office-accessories', 'smart-home'],
     price: 12000,
     image: '/assets/accessories/lamp.svg',
     description: 'Adjustable desk lamp with warm eye-care LED light.',
@@ -127,6 +160,7 @@ export const products: Product[] = [
     id: 'plant',
     name: 'Monstera Plant',
     category: 'accessory',
+    subCategories: ['office-accessories', 'smart-home'],
     price: 7000,
     image: '/assets/accessories/plant.svg',
     description: 'Fresh indoor green Monstera potted plant to boost productivity.',
@@ -135,6 +169,7 @@ export const products: Product[] = [
     id: 'bonsai-plant',
     name: 'Zen Bonsai Tree',
     category: 'accessory',
+    subCategories: ['office-accessories', 'smart-home'],
     price: 9000,
     image: '/assets/accessories/bonsai-plant.svg',
     description: 'Japanese Zen desk bonsai tree in ceramic dish.',
@@ -143,6 +178,7 @@ export const products: Product[] = [
     id: 'keyboard',
     name: 'Mechanical Keyboard',
     category: 'accessory',
+    subCategories: ['office-accessories', 'computer', 'gaming'],
     price: 7000,
     image: '/assets/accessories/keyboard.svg',
     description: '75% mechanical keyboard with RGB underglow and satisfying switches.',
@@ -151,6 +187,7 @@ export const products: Product[] = [
     id: 'mouse',
     name: 'Wireless Mouse',
     category: 'accessory',
+    subCategories: ['office-accessories', 'computer', 'gaming'],
     price: 5000,
     image: '/assets/accessories/mouse.svg',
     description: 'Precision wireless ergonomic mouse with DPI control.',
@@ -159,6 +196,7 @@ export const products: Product[] = [
     id: 'laptop-stand',
     name: 'Laptop Riser Stand',
     category: 'accessory',
+    subCategories: ['office-accessories', 'computer', 'health-fitness'],
     price: 10000,
     image: '/assets/accessories/laptop-stand.svg',
     description: 'Aluminum notebook riser with Space Grey MacBook.',
@@ -167,6 +205,7 @@ export const products: Product[] = [
     id: 'headset',
     name: 'Over-Ear Headset',
     category: 'accessory',
+    subCategories: ['audio-video', 'gaming'],
     price: 5000,
     image: '/assets/accessories/headset.svg',
     description: 'Over-ear noise-isolating headset with built-in mic.',
@@ -211,10 +250,21 @@ export function getProductById(id: string): Product | undefined {
   return products.find((p) => p.id === id);
 }
 
-export function getProductsByCategory(category: Product['category']): Product[] {
-  return products.filter((p) => p.category === category);
+export function getProductsByCategory(category: CategoryTab): Product[] {
+  if (category === 'all') return products;
+  return products.filter((p) => p.subCategories.includes(category));
 }
 
-export function formatPrice(price: number): string {
+export function formatPrice(price: number, currency: Currency = 'IDR'): string {
+  if (currency === 'USD') {
+    const usd = price / 15000;
+    return `$${usd.toFixed(2)}`;
+  }
+  if (currency === 'EUR') {
+    const eur = price / 16500;
+    return `€${eur.toFixed(2)}`;
+  }
   return `Rp ${price.toLocaleString('id-ID')}`;
 }
+
+

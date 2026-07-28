@@ -1,8 +1,19 @@
 import { create } from 'zustand';
-import { WorkspaceSetup } from '@/types/workspace';
+import { WorkspaceSetup, Currency } from '@/types/workspace';
 
 interface WorkspaceState extends WorkspaceSetup {
+  // Currency & Panel visibility
+  currency: Currency;
+  isLeftPanelOpen: boolean;
+  isRightPanelOpen: boolean;
+
   // Actions
+  setCurrency: (currency: Currency) => void;
+  toggleLeftPanel: () => void;
+  toggleRightPanel: () => void;
+  setLeftPanelOpen: (open: boolean) => void;
+  setRightPanelOpen: (open: boolean) => void;
+
   setDesk: (deskId: string) => void;
   setChair: (chairId: string) => void;
   toggleAccessory: (accessoryId: string) => void;
@@ -23,6 +34,16 @@ const initialState: WorkspaceSetup = {
 
 export const useWorkspaceStore = create<WorkspaceState>((set) => ({
   ...initialState,
+  currency: 'IDR',
+  isLeftPanelOpen: true,
+  isRightPanelOpen: true,
+
+  setCurrency: (currency) => set({ currency }),
+  toggleLeftPanel: () => set((state) => ({ isLeftPanelOpen: !state.isLeftPanelOpen })),
+
+  toggleRightPanel: () => set((state) => ({ isRightPanelOpen: !state.isRightPanelOpen })),
+  setLeftPanelOpen: (open) => set({ isLeftPanelOpen: open }),
+  setRightPanelOpen: (open) => set({ isRightPanelOpen: open }),
 
   setDesk: (deskId) => set({ selectedDeskId: deskId }),
 
@@ -65,3 +86,4 @@ export const useWorkspaceStore = create<WorkspaceState>((set) => ({
       duration: 1,
     }),
 }));
+

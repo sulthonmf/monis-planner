@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Trash2 } from 'lucide-react';
+import { Trash2, PanelRightClose, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useWorkspaceStore } from '@/store/useWorkspaceStore';
 import { getProductById, formatPrice, durationOptions } from '@/data/products';
@@ -12,9 +12,11 @@ export default function SetupSummary() {
     selectedChairId,
     selectedAccessories,
     duration,
+    currency,
     setDesk,
     setChair,
     removeAccessory,
+    toggleRightPanel,
   } = useWorkspaceStore();
 
   const desk = selectedDeskId ? getProductById(selectedDeskId) : null;
@@ -49,11 +51,21 @@ export default function SetupSummary() {
   );
 
   return (
-    <aside className="w-[280px] min-w-[280px] bg-white border-l border-gray-100 flex flex-col h-full overflow-hidden">
+    <aside className="w-[280px] min-w-[280px] bg-white border-l border-gray-100 flex flex-col h-full overflow-hidden select-none">
       {/* Header */}
-      <div className="p-4 border-b border-gray-100">
-        <h2 className="text-lg font-bold text-gray-900">Your Setup</h2>
-        <p className="text-xs text-gray-400">Weekly Rental</p>
+      <div className="p-4 border-b border-gray-100 flex items-center justify-between">
+        <div>
+          <h2 className="text-lg font-bold text-gray-900">Your Setup</h2>
+          <p className="text-xs text-gray-400">Weekly Rental</p>
+        </div>
+        <button
+          onClick={toggleRightPanel}
+          title="Hide summary panel"
+          className="p-1.5 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors flex items-center gap-1 text-xs"
+        >
+          <span className="text-[11px] font-medium text-gray-500">Hide</span>
+          <PanelRightClose size={16} />
+        </button>
       </div>
 
       {/* Items List */}
@@ -80,7 +92,7 @@ export default function SetupSummary() {
                   {desk.name}
                 </p>
                 <p className="text-xs text-emerald-600 font-medium">
-                  {formatPrice(desk.price)} / week
+                  {formatPrice(desk.price, currency)} / week
                 </p>
               </div>
               <button
@@ -115,7 +127,7 @@ export default function SetupSummary() {
                   {chair.name}
                 </p>
                 <p className="text-xs text-emerald-600 font-medium">
-                  {formatPrice(chair.price)} / week
+                  {formatPrice(chair.price, currency)} / week
                 </p>
               </div>
               <button
@@ -161,7 +173,7 @@ export default function SetupSummary() {
                       {product.name}
                     </p>
                     <p className="text-xs text-emerald-600 font-medium">
-                      {formatPrice(product.price * quantity)} / week
+                      {formatPrice(product.price * quantity, currency)} / week
                     </p>
                   </div>
                   <button
@@ -181,14 +193,14 @@ export default function SetupSummary() {
       <div className="p-4 border-t border-gray-100 space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-gray-500">Subtotal</span>
-          <span className="text-gray-700 font-medium">{formatPrice(subtotal)}</span>
+          <span className="text-gray-700 font-medium">{formatPrice(subtotal, currency)}</span>
         </div>
 
         {discountPercent > 0 && (
           <div className="flex justify-between text-sm">
             <span className="text-gray-500">Discount ({discountPercent}%)</span>
             <span className="text-emerald-600 font-medium">
-              - {formatPrice(discountAmount)}
+              - {formatPrice(discountAmount, currency)}
             </span>
           </div>
         )}
@@ -198,16 +210,17 @@ export default function SetupSummary() {
             <div>
               <p className="text-xs text-gray-400">Total / week</p>
             </div>
-            <p className="text-2xl font-bold text-gray-900">{formatPrice(total)}</p>
+            <p className="text-2xl font-bold text-gray-900">{formatPrice(total, currency)}</p>
           </div>
         </div>
 
         {/* CTA Button */}
         <button className="w-full mt-3 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-sm transition-all shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 group">
-          Checkout
-          <span className="group-hover:translate-x-1 transition-transform">→</span>
+          <ShoppingCart size={18} />
+          <span>Checkout</span>
         </button>
       </div>
     </aside>
   );
 }
+

@@ -7,8 +7,9 @@ import { durationOptions, formatPrice, getProductById } from '@/data/products';
 import { useState } from 'react';
 
 export default function DurationSelector() {
-  const { duration, setDuration, selectedDeskId, selectedChairId, selectedAccessories } =
+  const { duration, setDuration, selectedDeskId, selectedChairId, selectedAccessories, currency } =
     useWorkspaceStore();
+
   const [showCustom, setShowCustom] = useState(false);
   const [customWeeks, setCustomWeeks] = useState('');
 
@@ -83,7 +84,8 @@ export default function DurationSelector() {
                     isActive ? 'text-emerald-100' : 'text-gray-400'
                   }`}
                 >
-                  {formatPrice(discountedPrice)} / week
+                  {formatPrice(discountedPrice, currency)} / week
+
                 </p>
               </button>
             );
