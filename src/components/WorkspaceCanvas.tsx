@@ -51,13 +51,13 @@ export default function WorkspaceCanvas() {
   return (
     <div className="flex-1 relative bg-gray-900 overflow-hidden select-none">
       {/* Background Selector */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-40 flex items-center gap-3 bg-white/90 backdrop-blur-md rounded-full px-4 py-2 shadow-xl border border-white/50">
-        <span className="text-xs font-semibold text-gray-700">Background</span>
+      <div className="absolute top-3 sm:top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 sm:gap-3 bg-white/90 backdrop-blur-md rounded-full px-3 py-1.5 sm:px-4 sm:py-2 shadow-xl border border-white/50 max-w-[92vw] overflow-x-auto scrollbar-none">
+        <span className="text-[11px] sm:text-xs font-semibold text-gray-700 whitespace-nowrap">Theme</span>
         {backgrounds.map((bg) => (
           <button
             key={bg.id}
             onClick={() => setBackground(bg.id)}
-            className={`w-9 h-9 rounded-full overflow-hidden border-2 transition-all ${
+            className={`w-7 h-7 sm:w-9 sm:h-9 rounded-full overflow-hidden border-2 transition-all flex-shrink-0 ${
               selectedBackgroundId === bg.id
                 ? 'border-emerald-500 scale-110 shadow-md ring-2 ring-emerald-400'
                 : 'border-white/60 hover:border-emerald-300'
@@ -72,48 +72,48 @@ export default function WorkspaceCanvas() {
             />
           </button>
         ))}
-        <button className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
-          <Users size={16} className="text-gray-600" />
+        <button className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors flex-shrink-0">
+          <Users size={14} className="text-gray-600 sm:w-4 sm:h-4" />
         </button>
       </div>
 
       {/* Drag & Drop Hint */}
-      <div className="absolute top-4 left-4 z-40 flex items-center gap-2 bg-white/90 backdrop-blur-md rounded-xl px-3.5 py-2 shadow-md border border-white/50 text-xs font-semibold text-gray-800">
+      <div className="absolute top-4 left-4 z-30 hidden lg:flex items-center gap-2 bg-white/90 backdrop-blur-md rounded-xl px-3.5 py-2 shadow-md border border-white/50 text-xs font-semibold text-gray-800">
         <Move size={15} className="text-emerald-600 animate-bounce" />
         <span>Click & drag any item anywhere to arrange your room</span>
       </div>
 
       {/* Share/Screenshot */}
-      <div className="absolute top-4 right-4 z-40 flex flex-col gap-2">
-        <button className="flex items-center gap-2 px-3 py-2 bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-white/50 text-sm font-medium text-gray-700 hover:bg-white transition-colors">
-          <Share2 size={14} />
-          Share
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 flex flex-col gap-1.5 sm:gap-2">
+        <button className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-2 bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-white/50 text-xs sm:text-sm font-medium text-gray-700 hover:bg-white transition-colors">
+          <Share2 size={13} className="sm:w-3.5 sm:h-3.5" />
+          <span className="hidden sm:inline">Share</span>
         </button>
-        <button className="flex items-center gap-2 px-3 py-2 bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-white/50 text-sm font-medium text-gray-700 hover:bg-white transition-colors">
-          <Camera size={14} />
-          Screenshot
+        <button className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3 sm:py-2 bg-white/90 backdrop-blur-md rounded-lg shadow-sm border border-white/50 text-xs sm:text-sm font-medium text-gray-700 hover:bg-white transition-colors">
+          <Camera size={13} className="sm:w-3.5 sm:h-3.5" />
+          <span className="hidden sm:inline">Photo</span>
         </button>
       </div>
 
       {/* Zoom Controls */}
-      <div className="absolute bottom-4 right-4 z-40 flex flex-col gap-1">
+      <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-30 flex flex-col gap-1">
         <button
           onClick={() => setZoom(Math.min(zoom + 0.1, 1.5))}
-          className="w-9 h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
+          className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
         >
-          <Plus size={16} className="text-gray-700" />
+          <Plus size={15} className="text-gray-700" />
         </button>
         <button
           onClick={() => setZoom(Math.max(zoom - 0.1, 0.6))}
-          className="w-9 h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
+          className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
         >
-          <Minus size={16} className="text-gray-700" />
+          <Minus size={15} className="text-gray-700" />
         </button>
         <button
           onClick={() => setZoom(1)}
-          className="w-9 h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
+          className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-center hover:bg-white transition-colors"
         >
-          <RotateCcw size={14} className="text-gray-700" />
+          <RotateCcw size={13} className="text-gray-700" />
         </button>
       </div>
 
@@ -125,11 +125,11 @@ export default function WorkspaceCanvas() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             onClick={toggleLeftPanel}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-3.5 py-2.5 flex items-center gap-2 transition-transform hover:scale-105 group"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-2.5 py-2 sm:px-3.5 sm:py-2.5 flex items-center gap-1.5 sm:gap-2 transition-transform hover:scale-105 group"
             title="Open Catalog Panel"
           >
-            <PanelLeftOpen size={18} className="text-emerald-600 group-hover:scale-110 transition-transform" />
-            <span className="text-xs font-bold">Catalog</span>
+            <PanelLeftOpen size={16} className="text-emerald-600 group-hover:scale-110 transition-transform sm:w-4.5 sm:h-4.5" />
+            <span className="text-[11px] sm:text-xs font-bold">Catalog</span>
           </motion.button>
         )}
       </AnimatePresence>
@@ -141,14 +141,15 @@ export default function WorkspaceCanvas() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
             onClick={toggleRightPanel}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-3.5 py-2.5 flex items-center gap-2 transition-transform hover:scale-105 group"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-md hover:bg-white text-gray-800 shadow-xl border border-gray-200/80 rounded-xl px-2.5 py-2 sm:px-3.5 sm:py-2.5 flex items-center gap-1.5 sm:gap-2 transition-transform hover:scale-105 group"
             title="Open Summary Panel"
           >
-            <span className="text-xs font-bold">Summary</span>
-            <PanelRightOpen size={18} className="text-emerald-600 group-hover:scale-110 transition-transform" />
+            <span className="text-[11px] sm:text-xs font-bold">Summary</span>
+            <PanelRightOpen size={16} className="text-emerald-600 group-hover:scale-110 transition-transform sm:w-4.5 sm:h-4.5" />
           </motion.button>
         )}
       </AnimatePresence>
+
 
 
       {/* === CANVAS SCENE === */}

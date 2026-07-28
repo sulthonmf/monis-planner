@@ -37,10 +37,10 @@ export default function DurationSelector() {
   };
 
   return (
-    <div className="bg-white border-t border-gray-100 px-6 py-3">
-      <div className="flex items-center gap-4">
+    <div className="bg-white border-t border-gray-100 px-4 sm:px-6 pt-3.5 pb-2.5 select-none">
+      <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto scrollbar-none pt-2 pb-1">
         {/* Label */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 hidden md:block">
           <p className="text-sm font-semibold text-gray-900">
             How long do you want to rent?
           </p>
@@ -50,7 +50,7 @@ export default function DurationSelector() {
         </div>
 
         {/* Duration Options */}
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex items-center gap-2.5 flex-1 min-w-0">
           {durationOptions.map((option) => {
             const isActive = duration === option.weeks;
             const discountedPrice = Math.round(
@@ -60,19 +60,19 @@ export default function DurationSelector() {
               <button
                 key={option.weeks}
                 onClick={() => setDuration(option.weeks)}
-                className={`relative flex-1 py-2.5 px-3 rounded-xl text-center transition-all ${
+                className={`relative flex-1 min-w-[105px] py-2.5 px-3 rounded-xl text-center transition-all ${
                   isActive
-                    ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/20'
+                    ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                     : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-100'
                 }`}
               >
                 {/* Discount Badge */}
                 {option.discount > 0 && (
                   <span
-                    className={`absolute -top-2 right-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    className={`absolute -top-2 right-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-xs ${
                       isActive
-                        ? 'bg-white text-emerald-600'
-                        : 'bg-emerald-100 text-emerald-700'
+                        ? 'bg-white text-emerald-700'
+                        : 'bg-emerald-100 text-emerald-700 border border-emerald-200/60'
                     }`}
                   >
                     {option.discount}% OFF
@@ -80,16 +80,16 @@ export default function DurationSelector() {
                 )}
                 <p className="text-sm font-semibold">{option.label}</p>
                 <p
-                  className={`text-[11px] mt-0.5 ${
+                  className={`text-[11px] mt-0.5 whitespace-nowrap ${
                     isActive ? 'text-emerald-100' : 'text-gray-400'
                   }`}
                 >
                   {formatPrice(discountedPrice, currency)} / week
-
                 </p>
               </button>
             );
           })}
+
 
           {/* Custom Duration */}
           <div className="relative flex-shrink-0">

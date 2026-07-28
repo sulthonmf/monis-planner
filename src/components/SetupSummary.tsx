@@ -51,7 +51,8 @@ export default function SetupSummary() {
   );
 
   return (
-    <aside className="w-[280px] min-w-[280px] bg-white border-l border-gray-100 flex flex-col h-full overflow-hidden select-none">
+    <aside className="w-full md:w-[280px] md:min-w-[280px] bg-white border-l border-gray-100 flex flex-col h-full overflow-hidden select-none">
+
       {/* Header */}
       <div className="p-4 border-b border-gray-100 flex items-center justify-between">
         <div>

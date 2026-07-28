@@ -75,7 +75,8 @@ export default function SidebarCatalog() {
   const activeMeta = categoryTabs.find((c) => c.key === activeTab) || categoryTabs[0];
 
   return (
-    <aside className="w-[320px] min-w-[320px] bg-white border-r border-gray-100 flex flex-col h-full overflow-hidden select-none">
+    <aside className="w-full md:w-[320px] md:min-w-[320px] bg-white border-r border-gray-100 flex flex-col h-full overflow-hidden select-none">
+
       {/* Header & Hide Button */}
       <div className="flex items-center justify-between px-3.5 py-2.5 border-b border-gray-100 bg-gray-50/50">
         <div className="flex items-center gap-2">
